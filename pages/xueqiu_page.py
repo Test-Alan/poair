@@ -7,11 +7,12 @@ class LoginPage(BasePage):
     name = "阿里巴巴"
     stockCode = "BABA"
 
+    # 搜索
     def search(self, value):
         self.poco(self.tv_search).click()
         self.send_keys(value)
         self.poco(text=self.name).click()
 
-
+    # 获取text值
     def get_text(self):
         return self.poco(text=self.stockCode).get_text()
