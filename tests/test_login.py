@@ -6,3 +6,4 @@ class TestLogin:
     def test_login(self, endevice):
         page = LoginPage(endevice)
         page.search("alibaba")
+        assert page.get_text() == "BABA"
