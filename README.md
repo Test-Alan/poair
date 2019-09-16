@@ -1,0 +1,2 @@
+# poair
+基于airtest和poco两个框架封装的po模型并结合了pytes和allure报告
