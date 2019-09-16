@@ -12,12 +12,14 @@ class BasePage:
 
     def __init__(self, dev):
         self.poco = AndroidUiautomationPoco(dev, use_airtest_input=True, screenshot_each_action=False)
+        # 黑名单元素，用来防止意外弹出处理
         self.black_list = ["aaa"]
+        # 最大查找元素次数
         self.max = 2
 
     def poco_find(self, elm=None, **kwargs):
         try:
-            print("开始找元素")
+            logger.info("开始查找元素")
             if elm is not None:
                 location = elm
             else:
@@ -31,7 +33,7 @@ class BasePage:
                 logger.info(format(self.__class__.__name__) + "页面" + "{}对象未找到".format(''.join(location)))
                 allure.attach(self.poco.snapshot(), name='-'.join(location) + "对象未找到截图.png",
                               attachment_type=AttachmentType.PNG)
-                raise ("已到达最大查找次数，并未找到元素。")
+                raise ("已到达最大查找次数，并未找到元素！")
             print("max=", self.max)
             self.max -= 1
             # bugs here as the panel not shown
@@ -46,7 +48,6 @@ class BasePage:
             else:
                 return self.poco_find(elm, **kwargs)
         else:
-            print("已找到")
             logger.info(format(self.__class__.__name__) + "页面" + "{}对象已找到".format(''.join(location)))
             return self.poco(elm, **kwargs)
 
