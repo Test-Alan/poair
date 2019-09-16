@@ -38,16 +38,16 @@ def new_report_time():
 
 # 启动app
 @pytest.fixture(scope='session', autouse=True)
-def endevice():
+def app():
     dev = connect_device(device)
     # script content
     print("start...")
     start_app("com.xueqiu.android")
     return dev
 
-# 关闭浏览器
+# 关闭app
 @pytest.fixture(scope="session", autouse=True)
-def driver_close():
+def app_shut():
     yield
     stop_app("com.xueqiu.android")
     time.sleep(2)
