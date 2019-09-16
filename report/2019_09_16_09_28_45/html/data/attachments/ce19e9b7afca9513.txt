@@ -1,0 +1,48 @@
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 get-state
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 connect 127.0.0.1:7555
+INFO     airtest.core.android.adb:adb.py:239 connected to 127.0.0.1:7555
+
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 wait-for-device
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell getprop ro.build.version.sdk
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell monkey -p com.xueqiu.android -c android.intent.category.LAUNCHER 1 ; echo ---$?---
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell dumpsys activity top ; echo ---$?---
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell dumpsys package com.netease.nie.yosemite ; echo ---$?---
+INFO     airtest.core.android.yosemite:yosemite.py:38 local version code is 288, installed version code is 288
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell settings get secure default_input_method ; echo ---$?---
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell ime list -a ; echo ---$?---
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell ime enable com.netease.nie.yosemite/.ime.ImeService ; echo ---$?---
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell ime set com.netease.nie.yosemite/.ime.ImeService ; echo ---$?---
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell dumpsys package com.netease.open.pocoservice ; echo ---$?---
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell dumpsys package com.netease.open.pocoservice.test ; echo ---$?---
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 forward --no-rebind tcp:14800 tcp:10080
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 forward --no-rebind tcp:19741 tcp:10081
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell ps ; echo ---$?---
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell am force-stop com.netease.open.pocoservice ; echo ---$?---
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell am start -n com.netease.open.pocoservice/.TestActivity ; echo ---$?---
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell am instrument -w -e debug false -e class com.netease.open.pocoservice.InstrumentedTestAsLauncher com.netease.open.pocoservice.test/android.support.test.runner.AndroidJUnitRunner
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell dumpsys display
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell dumpsys SurfaceFlinger ; echo ---$?---
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell getevent -p ; echo ---$?---
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell getprop ro.product.cpu.abi
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell getprop ro.build.version.sdk
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell ls /data/local/tmp/minitouch ; echo ---$?---
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell ls -l /data/local/tmp/minitouch ; echo ---$?---
+DEBUG    airtest.core.android.minitouch:minitouch.py:95 install_minitouch skipped
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell dumpsys display
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell dumpsys SurfaceFlinger ; echo ---$?---
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell getevent -p ; echo ---$?---
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 forward --no-rebind tcp:17435 localabstract:minitouch_17435
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell /data/local/tmp/minitouch -n 'minitouch_17435' 2>&1
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minitouch_server]b'Note: device /dev/input/mouse1 is not supported by libevdev'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minitouch_server]b'Note: device /dev/input/mice is not supported by libevdev'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minitouch_server]b'Note: device /dev/input/mouse0 is not supported by libevdev'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minitouch_server]b'Type B touch device nemuVM Virtual Input (750x1334 with 32 contacts) detected on /dev/input/event5 (score 22031)'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minitouch_server]b'Note: hard-limiting maximum number of contacts to 10'
+DEBUG    airtest.utils.nbsp:nbsp.py:37 [minitouch_server]b'Connection established'
+DEBUG    airtest.core.android.minitouch:minitouch.py:550 minitouch header:b'v 1\n^ 10 750 1334 0\n$ 1620\n'
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell dumpsys package com.netease.nie.yosemite ; echo ---$?---
+INFO     airtest.core.android.yosemite:yosemite.py:38 local version code is 288, installed version code is 288
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell settings get secure default_input_method ; echo ---$?---
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell ime list -a ; echo ---$?---
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell am broadcast -a ADB_INPUT_TEXT --es msg 'alibaba' ; echo ---$?---
+DEBUG    airtest.core.android.adb:adb.py:142 C:\Python37\lib\site-packages\airtest\core\android\static\adb\windows\adb.exe -P 5037 -s 127.0.0.1:7555 shell input keyevent ENTER ; echo ---$?---

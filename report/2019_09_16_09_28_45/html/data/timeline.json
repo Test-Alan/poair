@@ -1,0 +1,26 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "lenovo-PC",
+    "children" : [ {
+      "name" : "7900-MainThread",
+      "children" : [ {
+        "name" : "test_search",
+        "uid" : "349a59a64ff16280",
+        "parentUid" : "cd31aebe9eceb1364918dcad46bc4b97",
+        "status" : "passed",
+        "time" : {
+          "start" : 1568597330350,
+          "stop" : 1568597345004,
+          "duration" : 14654
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "cd31aebe9eceb1364918dcad46bc4b97"
+    } ],
+    "uid" : "4390f85e985fc93a260b4fcc0ede2287"
+  } ]
+}

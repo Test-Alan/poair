@@ -1,0 +1,22 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "tests.test_xueqiu",
+    "children" : [ {
+      "name" : "test_search",
+      "uid" : "349a59a64ff16280",
+      "parentUid" : "9212a965dd4642939d4d5af0444f9d3f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1568597330350,
+        "stop" : 1568597345004,
+        "duration" : 14654
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "tests.test_xueqiu"
+  } ]
+}

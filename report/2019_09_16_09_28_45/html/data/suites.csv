@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Sep 16 09:28:50 CST 2019","Mon Sep 16 09:29:05 CST 2019","14654","tests","test_xueqiu","TestXueQiu","","","test_search",""
