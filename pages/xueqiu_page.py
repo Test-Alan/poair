@@ -2,7 +2,7 @@ from pages.base_page import BasePage
 
 
 class LoginPage(BasePage):
-    tv_search = "com.xueqiu.android:id/tv_search1"
+    tv_search = "com.xueqiu.android:id/tv_search"
     search_input_text = "com.xueqiu.android:id/search_input_text"
     name = "阿里巴巴"
     stockCode = "BABA"
