@@ -4,7 +4,6 @@ import pytest
 from airtest.core.api import *
 
 
-
 # 项目目录配置
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 REPORT_DIR = os.path.join(BASE_DIR, "report")
@@ -47,12 +46,12 @@ def endevice():
     return dev
 
 # 关闭浏览器
-# @pytest.fixture(scope="session", autouse=True)
-# def driver_close():
-#     yield dr
-#     dr.quit()
-#     time.sleep(2)
-#     print("test end!")
+@pytest.fixture(scope="session", autouse=True)
+def driver_close():
+    yield
+    stop_app("com.xueqiu.android")
+    time.sleep(2)
+    print("test end!")
 
 
 

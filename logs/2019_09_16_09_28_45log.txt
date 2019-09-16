@@ -1,3 +1,0 @@
-2019-09-16 09:28:45,649 run_tests.py[line:34] INFO 回归模式，开始执行✈✈！
-2019-09-16 09:29:05,011 run_tests.py[line:45] INFO allure generate E:\PycharmProjects\poair\report\2019_09_16_09_28_45\xml -o E:\PycharmProjects\poair\report\2019_09_16_09_28_45\html
-2019-09-16 09:29:05,014 run_tests.py[line:47] INFO 运行结束，生成测试报告♥❤！
