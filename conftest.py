@@ -21,12 +21,14 @@ rerun = "3"
 # 运行测试用例的目录或文件
 cases_path = "./tests/"
 
+# 当前时间
+now_time = time.strftime("%Y_%m_%d_%H_%M_%S")
 
 ############################
 
 def new_report_time():
     """
-    获取最新报告的目录名（即运行时间，例如：2018_11_21_17_40_44）
+    获取最新报告的目录名（即运行时间，例如：2019_08_21_17_40_44）
     """
     files = os.listdir(REPORT_DIR)
     files.sort()

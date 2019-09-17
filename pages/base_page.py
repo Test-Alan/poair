@@ -3,10 +3,8 @@ from airtest.core.api import *
 from allure_commons.types import AttachmentType
 from poco.drivers.android.uiautomation import AndroidUiautomationPoco
 from poco.exceptions import PocoTargetTimeout
-
-from utils.log_conf import init_logger
-
-logger = init_logger("log.txt")
+from utils.logger import logger
+from base64 import b64decode
 
 class BasePage:
 
@@ -26,12 +24,12 @@ class BasePage:
                 for k,v in kwargs.items():
                     location = k + "=" + v
 
-            self.poco(elm, **kwargs).wait_for_appearance(timeout=30)
+            self.poco(elm, **kwargs).wait_for_appearance(timeout=10)
         except PocoTargetTimeout:
             if self.max <= 0:
                 # 日志
                 logger.info(format(self.__class__.__name__) + "页面" + "{}对象未找到".format(''.join(location)))
-                allure.attach(self.poco.snapshot(), name='-'.join(location) + "对象未找到截图.png",
+                allure.attach(self.poco_snapshot(), name=''.join(location) + "对象未找到截图.png",
                               attachment_type=AttachmentType.PNG)
                 raise ("已到达最大查找次数，并未找到元素！")
             print("max=", self.max)
@@ -70,4 +68,16 @@ class BasePage:
     # 在目标设备上输入文本
     def send_keys(self, value, enter=True, **kwargs):
         text(value, enter, **kwargs)
+    # airtest切图
+    def snapshot(self, filename, msg):
+        snapshot(filename, msg)
 
+    # poco截图
+    def poco_snapshot(self):
+
+        b64img, fmt = self.poco.snapshot(width=720)
+        return b64decode(b64img)
+
+
+
+print(__name__)

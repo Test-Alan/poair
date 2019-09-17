@@ -5,12 +5,9 @@ import pytest
 import click
 from conftest import REPORT_DIR
 from conftest import cases_path, rerun
+from utils.logger import logger
 
-# logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-# logger = logging.getLogger(__name__)
-from utils.log_conf import init_logger
 
-logger = init_logger("log.txt")
 '''
 说明：
 1、用例创建原则，测试文件名必须以“test”开头，测试函数必须以“test”开头。
@@ -34,7 +31,6 @@ def run(m):
         logger.info("回归模式，开始执行✈✈！")
         now_time = time.strftime("%Y_%m_%d_%H_%M_%S")
         init_env(now_time)
-
         html_report = os.path.join(REPORT_DIR, now_time, "html")
         xml_report = os.path.join(REPORT_DIR, now_time, "xml")
         pytest.main(["-s", "-v",
